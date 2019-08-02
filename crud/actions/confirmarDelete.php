@@ -1,5 +1,7 @@
 <?php
     session_start();
+    include('actions/verificaLogin.php');
+    include('actions/verificaPermission.php');
 
     $id = $_GET['id'];
     if(!isset($_SESSION['confirma_delete'])){
