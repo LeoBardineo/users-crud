@@ -1,0 +1,86 @@
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar{
+    display: flex;
+}
+
+.modal-box{
+    background-color: white;
+    width: 40%;
+    min-width: 300px;
+    max-width: 800px;
+    padding: 25px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes modal-box{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+.mostrar .modal-box{
+    animation: modal-box 0.3s;
+}
+
+.modal-box > h3{
+    font-size: 25px;
+}
+
+.modal-box > p{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 80%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-box > p > a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.modal-btn{
+    background-color: #664C00;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.delete-btn{
+    margin-right: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
